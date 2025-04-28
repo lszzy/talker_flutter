@@ -1,7 +1,4 @@
 dependency_overrides:
-  talker:
-    path:
-      ../../talker
   talker_flutter:
     path:
       ../
