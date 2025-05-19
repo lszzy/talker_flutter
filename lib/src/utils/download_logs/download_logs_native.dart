@@ -10,5 +10,6 @@ Future<void> downloadFile(String logs) async {
   final file =
       await File('$dirPath/talker_logs_$fmtDate.txt').create(recursive: true);
   await file.writeAsString(logs);
-  await Share.shareXFiles(<XFile>[XFile(file.path)]);
+  final params = ShareParams(files: [XFile(file.path)]);
+  await SharePlus.instance.share(params);
 }
